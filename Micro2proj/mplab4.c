@@ -162,9 +162,6 @@ int expogpio(int gpiopin, int gpio_dir)
 /////////////////////////////////////////////////////////////////////////////
 
 
-
-//////////////////////////////////////////////////////////////////////////////
-
 int writegpio(int fhandle, int val)
 {
         if(val ==  0)
@@ -225,12 +222,6 @@ int readgpio2(int filehandle)
 }
 
 
-
-
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////
 
 int closegpio(int gpiopin, int filehandle)
@@ -252,8 +243,6 @@ int closegpio(int gpiopin, int filehandle)
 
         return(0);
 }
-
-
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -356,8 +345,6 @@ int msg_reset()
         writegpio(strobe,1);
         puts("\nstrobe is default high");
 
-
-
 return(0);
 }
 
@@ -450,8 +437,6 @@ int msg_ping()
        printf("\nGalileo reads:\n");
        puts("\t-7654");
        printf("\t %d%d%d%d\n",r3,r2,r1,r0);   
-       
-
 
 	//////////////////////////////////////////
         writegpio(strobe,0);
@@ -466,8 +451,6 @@ int msg_ping()
 
   return(0);
 }
-
-
 
 /////////////////////////////////////////////////////////////////////////////
 int msg_get()
@@ -569,8 +552,6 @@ int msg_get()
        puts("\t-7654");
        printf("\t %d%d%d%d",r3,r2,r1,r0);   
 
-       
-
 	//////////////////////////////////////////
         writegpio(strobe,0);
 
@@ -609,7 +590,6 @@ int msg_get()
 
 	{   printf(".");                   }
 
-       ////////////////////////////////////////   
        printf("\nGalileo reads:\n");
        puts("\tADC result bits----> 9-8-7-6");
        printf("\t                     %d-%d-%d-%d",r3,r2,r1,r0);
@@ -676,9 +656,6 @@ int msg_get()
        dec <<= 1;
 
 
-       ///////////////////////////////////////////////////
-        
-
        writegpio(strobe,0);
          /////////////////////////////////////////////////////////
         
@@ -687,13 +664,11 @@ int msg_get()
         d2=expogpio(GP_6,GPIO_DIRECTION_IN);
         d3=expogpio(GP_7,GPIO_DIRECTION_IN);
         /////////////////////////////////////////////////////////////
-
-    
+  
 
 	puts("\nPIC starts keeping ADC result bits--3----> 1-0-N-N values on BUS");
          
         for (l=0;l<=2000;l++)
-
 
 	  {              printf(".");        }
 
@@ -712,7 +687,6 @@ int msg_get()
        
        for (l=0;l<=20000;l++)
 
-
 	 {         printf(".");             }
        ////////////////////////////////////////   
        printf("\nGalileo reads:\n");
@@ -722,10 +696,7 @@ int msg_get()
        dec <<= 1;
        dec+= r2;
        //dec <<= 1;
-
-       
-
-        
+    
        /////////////////////////////////////////
 
        writegpio(strobe,0);
@@ -740,9 +711,8 @@ int msg_get()
 
 
 	   { printf(".");                     }
-       
 
-       //////////////////////////////////////// 
+	//////////////////////////////////////// 
        writegpio(strobe,1);
        printf("\nstrobe is high for reading");
 
@@ -760,8 +730,6 @@ int msg_get()
        printf("\nGalileo reads:\n");
        puts("\t-7654");
        printf("\t %d%d%d%d",r3,r2,r1,r0);  
-
-
 
        ////////////////////////////////////////////
        writegpio(strobe,0);
@@ -782,10 +750,6 @@ int msg_get()
                return(-1);
             }
 	writegpio(i2c_muxselect,0);
-
-
-
-
 
        //////////////////////////////////////////
 	  file1 = open(filename, O_RDWR);	
@@ -1082,8 +1046,6 @@ void *web_update (void *input)
 	}
 } 
 
-
-
 ///////////////////////////////////////////////////////////////////////////
 int main ()
 {
@@ -1311,16 +1273,3 @@ void change_dir(char inout) {
     }
 }
 //*****************************************************************************
-
-
-
-
-
-
-
-
-
-
-
-
-
