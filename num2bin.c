@@ -25,7 +25,7 @@ int main()
   
   while(quo!=0)
     {
-
+      
       rem=quo%2;
       quo =  quo/2;
       bin=bin+(rem*i);
