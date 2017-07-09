@@ -1,3 +1,8 @@
 # Pro_c
 
-This repo contains algorithms and data structure solutions in c written by @vamsipallapothula
+
+// This folder contains c example projects by
+
+// Mr.Vamsi Pallapothula
+
+//@copyright - 2018. All rights Reserved.
