@@ -5,4 +5,4 @@
 
 // Mr.Vamsi Pallapothula
 
-//@copyright - 2018. All rights Reserved.
+(C)copyright - 2018. All rights Reserved.
