@@ -1,5 +1,3 @@
-
-
 /**************************************************
  *  Description:                                  *
  *                                                *
@@ -7,7 +5,7 @@
  *                                                *
  *  Created on: Dec 04, 2016                      *
  *  Author: Vamsi Pallapothula                    * 
- *              *                                 *                              *  @ Copyrighted All rights reserved             *
+ *                                                *  
  *///**********************************************
 
 
